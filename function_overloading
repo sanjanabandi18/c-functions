@@ -1,0 +1,27 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+class absvalue
+{
+	public:
+		int num(int i);
+		double num(double d);
+};
+int absvalue::num(int i)
+{
+	return (abs(i));
+}
+double absvalue::num(double d)
+{
+	return (fabs(d));
+}
+int main()
+{
+	absvalue a;
+	cout<<"the  absolute value of -10 is : "<<a.num(-10)<<endl;
+	cout<<"the  absolute value of -12.15 is : "<<a.num(-12.15)<<endl;
+	return 0;
+}
+Output:
+the  absolute value of -10 is : 10
+the  absolute value of -12.15 is : 12.15
