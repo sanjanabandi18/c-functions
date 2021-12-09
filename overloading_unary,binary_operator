@@ -1,0 +1,75 @@
+Develop a C++ program to Overload Unary, and Binary Operators using member function.
+#include <iostream>
+using namespace std;
+class loc
+{
+	int longitude, latitude;
+public:
+	loc()
+	{
+		
+	}
+	loc(int lg, int lt)
+	{
+		longitude=lg;
+		latitude=lt;
+	}
+	void show()
+	{
+		cout<<longitude<<" "<<latitude<<endl;
+	}
+	loc operator+(loc op2);
+	loc operator-(loc op2);
+	loc operator=(loc op2);
+	loc operator+=(loc op2);
+	loc operator++();
+};
+loc loc::operator+(loc op2)
+{
+	loc temp;
+	temp.longitude = op2.longitude + longitude;
+	temp.latitude = op2.latitude + latitude;
+	return temp;
+}
+loc loc::operator-(loc op2)
+{
+	loc temp;
+	temp.longitude = op2.longitude - longitude;
+	temp.latitude = op2.latitude - latitude;
+	return temp;
+}
+loc loc::operator=(loc op2)
+{
+longitude = op2.longitude;
+latitude = op2.latitude;
+return *this;
+}
+loc loc::operator++()
+{
+longitude++;
+latitude++;
+return *this;
+}
+loc loc::operator+=(loc op2)
+{
+longitude = op2.longitude + longitude;
+latitude = op2.latitude + latitude;
+return *this;
+}
+int main()
+{
+	loc ob1(10, 20), ob2( 5, 30), ob3(90, 90);
+	ob1.show();
+	ob2.show();
+	++ob1;
+	ob1.show();
+	ob2 = ++ob1;
+	ob1.show();
+	ob2.show();
+	ob1 = ob2 = ob3;
+	ob1.show();
+	ob2.show();
+	loc ob5(ob2);
+	ob5.show();
+	return 0;
+}
