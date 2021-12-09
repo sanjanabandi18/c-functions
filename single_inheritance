@@ -1,0 +1,41 @@
+ Single Inheritance
+
+program:
+
+#include<iostream>
+using namespace std;
+class base
+{
+	/*base class*/
+	public:
+		void base_class(void);
+};
+/*function definition*/
+void base::base_class(void)
+{
+	cout<<"base class method"<<endl;
+}
+/*derived class*/
+class derived:public base
+{
+	public:
+		void derived_class(void);
+};
+void derived::derived_class(void)
+{
+	cout<<"derived class method"<<endl;
+}
+int main()
+{
+	derived objb;
+	objb.base_class();
+	objb.derived_class();
+	return 0;
+}
+
+output:
+
+base class method
+derived class method
+
+
