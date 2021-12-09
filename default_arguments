@@ -1,3 +1,7 @@
+Develop a C++ program to illustrate the use of default arguments.
+
+program:
+
 #include<iostream>
 #include<cmath>
 using namespace std;
@@ -19,7 +23,9 @@ int main()
 	power z(3,4);
 	return 0;
 }
+
 Output:
+
 8
 125
 81
