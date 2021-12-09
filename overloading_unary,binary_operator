@@ -1,4 +1,7 @@
 Develop a C++ program to Overload Unary, and Binary Operators using member function.
+
+program:
+
 #include <iostream>
 using namespace std;
 class loc
@@ -73,3 +76,14 @@ int main()
 	ob5.show();
 	return 0;
 }
+
+output:
+
+10 20
+5 30
+11 21
+12 22
+12 22
+90 90
+90 90
+90 90
