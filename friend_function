@@ -1,3 +1,7 @@
+Develop a C++ program illustrating friend function.
+
+program:
+
 #include<iostream>
 using namespace std;
 class base
@@ -22,7 +26,9 @@ int main()
 	cout<<"\n Average value is:"<<avg(obj)<<endl;
 	return 0;
 }
+
 Output:
+
 enter two values:11
 12
  Average value is:11.5
