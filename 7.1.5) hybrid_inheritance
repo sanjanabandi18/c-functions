@@ -39,9 +39,4 @@ int main()
 
 output:
 
-inside first base class constructor
-inside second base class constructor
-inside child class constructor
-inside child class destructor
-inside second base class destructor
-inside first base class destructor
+sum of 10 and 4 is : 14
