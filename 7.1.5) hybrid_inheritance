@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+class A
+{
+	public:
+		int x;
+};
+class B:public A
+{
+	public:
+		B()
+		{
+			x=10;
+		}
+};
+class C
+{
+    public:
+	    int y;
+	C()
+	{
+	    y=4;
+	}
+};
+class D:public B,public C
+{
+    public:
+    	void sum()
+	    {
+	    	cout<<"sum of "<<x<<" and "<<y<<" is : "<<x+y<<endl;	
+	    }	
+};
+int main()
+{
+	D objD;
+	objD.sum();
+	return 0;
+}
+
+output:
+
+inside first base class constructor
+inside second base class constructor
+inside child class constructor
+inside child class destructor
+inside second base class destructor
+inside first base class destructor
