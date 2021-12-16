@@ -1,0 +1,59 @@
+Develop a C++ program in C++ to illustrate the order of execution of
+constructors and destructors in inheritance.
+
+program:
+
+#include<iostream>
+using namespace std;
+class parent1
+{
+	public:
+	parent1()
+	{
+		cout<<"inside first base class constructor"<<endl;
+	}
+	~parent1()
+	{
+		cout<<"inside first base class destructor"<<endl;
+	}
+};
+class parent2
+{
+	public:
+	parent2()
+	{
+		cout<<"inside second base class constructor"<<endl;
+	}
+	~parent2()
+	{
+		cout<<"inside second base class destructor"<<endl;
+	}
+};
+class child:public parent1,public parent2
+{
+	public:
+	child()
+	{
+		cout<<"inside child class constructor"<<endl;
+	}
+	~child()
+	{
+		cout<<"inside child class destructor"<<endl;
+	}	
+};
+int main()
+{
+	child objC;
+	return 0;
+}
+
+out[put:
+
+
+inside first base class constructor
+inside second base class constructor
+inside child class constructor
+inside child class destructor
+inside second base class destructor
+inside first base class destructor
+
