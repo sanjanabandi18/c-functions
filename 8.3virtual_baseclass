@@ -1,0 +1,72 @@
+#include<iostream>
+using namespace std;
+class Student
+{
+   int rno;
+  public:
+    void getNumber()
+    {
+	cout<<"Enter Roll no:";
+    	cin>>rno;
+    }
+    void putNumber()
+    {
+    	cout<<"\n\n\t Roll no:"<<rno<<"\n";
+    }
+};
+class test: virtual public Student
+{
+  public:
+    int part1,part2;
+    void getMarks()
+    {
+    	cout<<"Enter marks\n";
+    	cout<<"Part1:";
+    	cin>>part1;
+    	cout<<"Part2:";
+    	cin>>part2;
+    }
+    void putMarks()
+	{
+    	cout<<"\t Marks obtained\n";
+    	cout<<"\n\t part1:"<<part1;
+		cout<<"\n\t part2:"<<part2;
+	}
+};
+class Sports:public virtual Student
+{
+	public:
+		int score;
+		void getScore()
+		{
+			cout<<"Enter sports score:";
+			cin>>score;
+		}
+		void putScore()
+		{
+			cout<<"\n\t sports score is:"<<score;
+		}
+};
+class Result:public test,public Sports
+{
+	int total;
+	public:
+		void display()
+		{
+			total=part1+part2+score;
+			putNumber();
+			putMarks();
+			putScore();
+			cout<<"\n\t Total Score:"<<total<<endl;
+		}
+};
+    
+int main()
+{
+	Result obj;
+	obj.getNumber();
+	obj.getMarks();
+	obj.getScore();
+	obj.display();
+	return 0;
+}
