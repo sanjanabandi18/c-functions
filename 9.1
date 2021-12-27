@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+class base
+{
+	public:
+		void display()
+		{
+			cout<<"Base Class Display"<<endl;
+		}
+		virtual void show()
+		{
+			cout<<"Base Class Show"<<endl;
+		}
+};
+class derived:public base
+{
+	public:
+		void display()
+		{
+			cout<<"Derived Class Dispaly"<<endl;
+		}
+		void show()
+		{
+			cout<<"Derived Class Show"<<endl;
+		}
+};
+int main()
+{
+	base b;
+	derived d;
+	base *bptr;
+	bptr=&b;
+	bptr->display();
+	bptr->show();
+	bptr=&d;
+	bptr->display();
+	bptr->show();
+	return 0;
+}
