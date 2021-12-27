@@ -1,0 +1,56 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+class Marks
+{
+   private:
+       int rno;
+       float perc;
+   public:
+       Marks()
+    {
+      rno=0;
+      perc=0.0f;
+    }
+    void readMarks(void)
+    {
+      cout<<"Enter roll number:"<<endl;
+      cin>>rno;
+      cout<<"Enter percentage:"<<endl;
+      cin>>perc;
+    }
+    void printMarks(void)
+    {
+       cout<<"Roll no:"<<rno<<endl;
+       cout<<"Percentage is:"<<perc<<"%"<<endl;
+    }
+};
+class Student
+{
+  private:
+     Marks objM;
+     char name[20];
+  public:
+      void readStudent(void)
+    {
+     cout<<"Enter name:";
+     cin.getline(name,20);
+     objM.readMarks();
+    }
+    void printStudent(void)
+    {
+     cout<<"Name:"<<name<<endl;
+     objM.printMarks();
+    }
+};
+int main()
+{
+Student std;
+std.readStudent();
+std.printStudent();
+return 0;
+}
+
+
+output:
+
