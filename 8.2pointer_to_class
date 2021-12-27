@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+class ssample
+{
+  public:
+   int x,y;
+   void getdata ()
+   {
+     x=10;
+     y=20;
+   }
+   void  print()
+   {
+     cout<<"x="<<x<<endl<<"y="<<y<<endl;
+   }
+};
+int main()
+{
+ssample s;
+ssample *ptr;
+ptr=&s;
+ptr->getdata();
+ptr->print();
+ssample *s1=new ssample;
+s1->getdata ();
+s1->print();
+return 0;
+}
+
+output:
+
+
