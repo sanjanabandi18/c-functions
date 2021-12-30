@@ -1,0 +1,59 @@
+Develop a C++ program to illustrate pure virtual function and calculate the
+area of different shapes by using abstract class.
+
+
+#include <iostream>
+using namespace std;
+
+class shapes
+{
+protected:
+    int width, height;
+public:
+    virtual int area() = 0;
+    void setval_height(int h)
+    {
+        height = h;
+    }
+    void setval_width(int w)
+    {
+        width = w;
+    }
+};
+
+class rectangle:public shapes
+{
+public:
+    int area()
+    {
+        return width * height;
+    }
+};
+
+class triangle:public shapes
+{
+public:
+    int area()
+    {
+        return (width * height)/2;
+    }
+};
+int main()
+{
+    rectangle r;
+    triangle t;
+    
+    r.setval_width(5);
+    r.setval_height(10);
+    
+    t.setval_width(15);
+    t.setval_height(20);
+    
+    cout<<"Area of Rectangle: "<<r.area()<<endl;
+    cout<<"Area of Triangle: "<<t.area()<<endl;
+}
+
+output:
+
+Area of Rectangle: 50
+Area of Triangle: 150
